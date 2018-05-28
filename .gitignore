@@ -1,0 +1,8 @@
+__pycache__
+**/migrations/0*.py
+db.sqlite3
+
+# Packages
+*.egg
+*.egg-info
+dist

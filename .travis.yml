@@ -1,0 +1,23 @@
+language: python
+
+python:
+  - 3.6
+  - 3.5
+
+install:
+  - pip3 install -r requirements.txt
+  - pip3 install .
+
+before_script:
+  - cd example
+  - flake8 example_app --exclude=migrations,settings.py,wsgi.py
+  - flake8 example 
+  - flake8 ../abstract_related_model
+  - pylint example_app
+  - pylint example 
+  - pylint ../abstract_related_model/
+
+script:
+  - ./manage.py makemigrations
+  - ./manage.py migrate
+  - ./manage.py test
