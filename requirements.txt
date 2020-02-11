@@ -1,4 +1,4 @@
-Django==2.0.4
+Django==2.2.10
 pylint==1.9.1
 flake8==3.5.0
 pylint-django==0.9.4
